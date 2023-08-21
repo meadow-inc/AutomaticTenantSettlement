@@ -1,0 +1,62 @@
+-------------------------
+INFOSHEET PARSER CLASS DESIGN
+-------------------------
+
+Attributes (Private):
+---------------------
+1. input: String
+   Description: Contains the file input.
+
+Methods (Public):
+-----------------
+1. __init__(self, source_destination: String):
+   Description: Reads the file from the source_destination into the input attribute.
+
+2. create_infosheet() -> InfoSheet:
+   Description: Utilizes private extraction methods to extract data from the source and create an instance of InfoSheet.
+
+Methods (Private):
+------------------
+1. _extract_anzahl_wohnungen() -> int:
+   Description: Extracts and returns the 'anzahl_wohnungen' value from the source.
+
+2. _extract_zahlungstag() -> String:
+   Description: Extracts and returns the 'zahlungstag' value from the source.
+
+3. _extract_muellabfuhr() -> float:
+   Description: Extracts and returns the 'muellabfuhr' value from the source.
+
+4. _extract_wasser_grundpreis() -> float:
+   Description: Extracts and returns the 'wasser_grundpreis' value from the source.
+
+5. _extract_wasser_preis_kubik() -> float:
+   Description: Extracts and returns the 'wasser_preis_kubik' value from the source.
+
+6. _extract_niederschlagswasser() -> float:
+   Description: Extracts and returns the 'niederschlagswasser' value from the source.
+
+7. _extract_schmutzwasser() -> float:
+   Description: Extracts and returns the 'schmutzwasser' value from the source.
+
+8. _extract_haftpflicht() -> float:
+   Description: Extracts and returns the 'haftpflichtversicherung' value from the source.
+
+9. _extract_elementar() -> float:
+   Description: Extracts and returns the 'elementarversicherung' value from the source.
+
+10. _extract_grundsteuer() -> dict:
+    Description: Extracts and returns the 'grundsteuer' dictionary value from the source.
+
+11. _extract_strom_allgemein() -> float:
+    Description: Extracts and returns the 'strom_allgemein' value from the source.
+
+12. _extract_apartments() -> dict:
+    Description: Extracts and returns the 'apartments' dictionary value from the source.
+
+13. _extract_tenants() -> [Tenant]:
+    Description: Extracts and returns the list of 'tenants' from the source.
+
+Purpose:
+--------
+The purpose of the InfoSheetParser class is to read and parse data from a specified source and facilitate the creation of an InfoSheet instance with the parsed data.
+

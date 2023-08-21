@@ -1,0 +1,80 @@
+---------------------
+DETAILED INFO SHEET CLASS DESIGN
+---------------------
+
+Attributes (Private):
+---------------------
+(Already provided in the high-level design)
+
+Methods (Public):
+-----------------
+
+1. __init__(self, anzahl_wohnungen, zahlungstag,...):
+   Pseudocode:
+   ----------
+   - Set each attribute with the passed value.
+   - Call the validate() method. If it returns False, print an error message and exit.
+
+2. validate() -> bool:
+   Pseudocode:
+   ----------
+   - Call each private validation method.
+   - If all methods return True, return True.
+   - Else, return False.
+
+3. get_*():
+   Pseudocode for get_zahlungstag() as an example:
+   ----------
+   - Return the value of zahlungstag.
+
+4. set_*():
+   Pseudocode for set_zahlungstag() as an example:
+   ----------
+   - Set the value of zahlungstag.
+   - Call validate(). If it returns False, print an error message and exit.
+
+Methods (Private):
+------------------
+
+1. _validate_anzahl_wohnungen():
+   Pseudocode:
+   ----------
+   - If anzahl_wohnungen equals 5, return True.
+   - Else, return False.
+
+2. _validate_zahlungstag():
+   Pseudocode:
+   ----------
+   - Use regex or string operations to check if zahlungstag is in DD.MM.YYYY format.
+   - If yes, return True. Else, return False.
+
+3. _validate_muellabfuhr()...:
+   Pseudocode for _validate_muellabfuhr() as an example:
+   ----------
+   - If muellabfuhr > 0, return True.
+   - Else, return False.
+
+4. _validate_grundsteuer():
+   Pseudocode:
+   ----------
+   - Check if the size of the grundsteuer dictionary equals 3.
+   - Check if the keys are "Erdgeschoss", "OG_links", "OG_rechts".
+   - Check if all values are > 0.
+   - If all conditions are met, return True. Else, return False.
+
+5. _validate_apartments():
+   Pseudocode:
+   ----------
+   - Check if the size of the apartments dictionary equals anzahl_wohnungen.
+   - Check if all values are > 0.
+   - If both conditions are met, return True. Else, return False.
+
+Constraints:
+------------
+(Already provided in the high-level design)
+
+Recommendations:
+----------------
+- Consider breaking down some of the bigger validation functions into smaller functions for better readability and maintainability.
+- Implement exception handling for better error management, instead of simply exiting.
+

@@ -1,0 +1,82 @@
+-------------------------
+DETAILED INFOSHEET PARSER CLASS DESIGN
+-------------------------
+
+Attributes (Private):
+---------------------
+(Already provided in the high-level design)
+
+Methods (Public):
+-----------------
+
+1. __init__(self, source_destination: String):
+   Pseudocode:
+   ----------
+   - Open the file at 'source_destination'.
+   - Read its content into the 'input' attribute.
+   - Close the file.
+
+2. create_infosheet() -> InfoSheet:
+   Pseudocode:
+   ----------
+   - For each attribute in InfoSheet:
+     * Call the respective private extraction method.
+     * Collect the extracted data.
+   - Create an instance of InfoSheet using the collected data.
+   - Return the InfoSheet instance.
+
+Methods (Private):
+------------------
+
+1. _extract_anzahl_wohnungen() -> int:
+   Pseudocode:
+   ----------
+   - Search for the pattern "Anzahl-Wohnungen:" in 'input'.
+   - Extract the subsequent number.
+   - Return the integer value.
+
+2. _extract_zahlungstag() -> String:
+   Pseudocode:
+   ----------
+   - Search for the pattern "Zahlungstag:" in 'input'.
+   - Extract the subsequent date in DD.MM.YY format.
+   - Return the date string.
+
+(For other attributes, the approach is similar.)
+
+3. _extract_muellabfuhr() -> float:
+   Pseudocode:
+   ----------
+   - Search for the pattern "<Muellabfuhr>" in 'input'.
+   - Extract the value after "Summe:" and before "</Muellabfuhr>".
+   - Convert to float and return.
+
+4. _extract_grundsteuer() -> dict:
+   Pseudocode:
+   ----------
+   - Search for the pattern "<Grundsteuer>" in 'input'.
+   - Extract values after each key (e.g., "Erdgeschoss:", "OG-links:", "OG-rechts:") and before "</Grundsteuer>".
+   - Return a dictionary with these keys and their corresponding float values.
+
+5. _extract_apartments() -> dict:
+   Pseudocode:
+   ----------
+   - Search for the pattern "<Apartments>" in 'input'.
+   - Extract values after each key (e.g., "Apartment:", "EG_links:", "OG_links:") and before "</Apartments>".
+   - Return a dictionary with these keys and their corresponding float values.
+
+6. _extract_tenants() -> [Tenant]:
+   Pseudocode:
+   ----------
+   - Search for all patterns between "<tenant-template>" and "</tenant-template>" in 'input'.
+   - For each match:
+     * Extract values for each key (e.g., "first_name:", "last_name:", ...).
+     * Create a Tenant object using these values.
+   - Return a list of Tenant objects.
+
+Recommendations:
+----------------
+- Consider using regular expressions (regex) for extracting values from the `input` string. They provide flexibility and can efficiently match patterns within text.
+- Include exception handling to manage potential issues (e.g., missing values, incorrect formats).
+- Ensure that the file is always properly closed after reading its content, perhaps using a context manager (`with` statement).
+

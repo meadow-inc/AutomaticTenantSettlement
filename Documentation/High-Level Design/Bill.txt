@@ -1,0 +1,101 @@
+-------------------
+BILL CLASS DESIGN
+-------------------
+
+Attributes (Private):
+---------------------
+1. tenant: Tenant
+   Description: Represents the tenant for whom the bill is calculated.
+
+2. muell_einheitspreis: float
+   Description: The unit price for waste disposal.
+
+3. muell_multiplikator: float
+   Description: Multiplier for the waste disposal cost.
+
+4. wasser_einheitspreis: float
+   Description: The unit price for water usage.
+
+5. wasser_multiplikator: float
+   Description: Multiplier for water usage cost.
+
+6. wasser_grundgebuehr_einheitspreis: float
+   Description: The unit price for the basic water fee.
+
+7. wasser_grundgebuehr_multiplikator: float
+   Description: Multiplier for the basic water fee cost.
+
+8. schmutz_niederschlagswasser_einheitspreis: float
+   Description: The unit price for wastewater and stormwater.
+
+9. schmutz_niederschlagswasser_multiplikator: float
+   Description: Multiplier for wastewater and stormwater cost.
+
+10. strom_allgemein_einheitspreis: float
+    Description: The unit price for general electricity.
+
+11. strom_allgemein_multiplikator: float
+    Description: Multiplier for general electricity cost.
+
+12. grundsteuer_einheitspreis: float
+    Description: The unit price for property tax.
+
+13. grundsteuer_multiplikator: float
+    Description: Multiplier for property tax.
+
+14. feuer_haftpflicht_einheitspreis: float
+    Description: The unit price for fire and liability insurance.
+
+15. feuer_haftpflicht_multiplikator: float
+    Description: Multiplier for fire and liability insurance cost.
+
+16. hausmeister_einheitspreis: float
+    Description: The unit price for janitor services.
+
+17. hausmeister_multiplikator: float
+    Description: Multiplier for janitor services cost.
+
+18. rechnungs_jahr: int
+    Description: The year for which the bills are created.
+
+Methods (Public):
+-----------------
+1. Getters and Setters for each attribute.
+
+2. muell_kosten() -> float:
+   Description: Calculates the total waste disposal cost.
+
+3. wasser_kosten() -> float:
+   Description: Calculates the total water usage cost.
+
+4. wasser_grundgebuehr_kosten() -> float:
+   Description: Calculates the total basic water fee cost.
+
+5. schmutz_niederschlagswasser_kosten() -> float:
+   Description: Calculates the total wastewater and stormwater cost.
+
+6. strom_allgemein_kosten() -> float:
+   Description: Calculates the total general electricity cost.
+
+7. grundsteuer_kosten() -> float:
+   Description: Calculates the total property tax cost.
+
+8. feuer_haftpflicht_kosten() -> float:
+   Description: Calculates the total fire and liability insurance cost.
+
+9. hausmeister_kosten() -> float:
+   Description: Calculates the total janitor service cost.
+
+10. summe_kosten() -> float:
+    Description: Calculates the total sum of all costs.
+
+11. summe_vorauszahlung() -> float:
+    Description: Calculates the total prepaid amount based on monthly installments.
+
+12. summe_nachzahlung() -> float:
+    Description: Calculates the amount left to be paid after deducting the prepaid amount from the total cost.
+
+Purpose:
+--------
+The purpose of the Bill class is to represent a bill for a specific tenant, calculating the costs for various services using their respective unit prices and multipliers. It provides a comprehensive overview of both individual service costs and the cumulative cost.
+

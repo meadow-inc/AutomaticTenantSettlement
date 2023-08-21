@@ -1,0 +1,72 @@
+---------------------
+TENANT CLASS DESIGN
+---------------------
+
+Attributes (Private):
+---------------------
+1. vorname: string
+2. nachname: string
+3. hausmeister: float
+4. ort: string
+5. dauer: float
+6. personen: float
+7. vorauszahlung: float
+8. ista_rechnung: float
+9. wassermenge: float
+
+Methods (Public):
+-----------------
+1. __init__(self, vorname, nachname,...): Tenant
+   Description: Constructor for the Tenant class.
+
+2. validate() -> bool:
+   Description: This method validates all attributes by calling private validation methods.
+
+3. get_*() and set_*() for each attribute:
+   Description: Getter and Setter methods for each private attribute.
+
+4. get_personenmonate() -> float:
+   Description: Calculate dauer * personen
+
+Methods (Private):
+------------------
+1. _validate_vorname():
+   Description: Validates the 'vorname' attribute ensuring it is not empty.
+
+2. _validate_nachname():
+   Description: Validates the 'nachname' ensuring it is not empty.
+
+3. _validate_hausmeister():
+   Description: Validates that the 'hausmeister' attribute is > 0.
+
+4. _validate_ort():
+   Description: Validates the 'ort' attribute, ensuring it is one of 
+   "EG_links", "EG_rechts", "Apartment", "OG_rechts", "OG_links".
+
+5. _validate_dauer():
+   Description: Validates the 'dauer' attribute ensuring it is > 0.
+
+6. _validate_personen():
+   Description: Validates that the 'personen' attribute is > 0.
+
+7. _validate_vorauszahlung():
+   Description: Validates the 'vorauszahlung' attribute ensuring it is > 0.
+
+8. _validate_ista_rechnung():
+   Description: Validates the 'ista_rechnung' attribute ensuring it is > 0.
+
+9. _validate_wassermenge():
+   Description: Validates the 'wassermenge' attribute ensuring it is > 0.
+
+Constraints:
+------------
+1. vorname: Should not be empty.
+2. nachname: Should not be empty.
+3. hausmeister: Should be > 0.
+4. ort: Should be one of "EG_links", "EG_rechts", "Apartment", "OG_rechts", "OG_links".
+5. dauer: Should be > 0.
+6. personen: Should be > 0.
+7. vorauszahlung: Should be > 0.
+8. ista_rechnung: Should be > 0.
+9. wassermenge: Should be > 0.
+

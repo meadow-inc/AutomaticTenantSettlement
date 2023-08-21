@@ -1,0 +1,60 @@
+---------------------
+INFO SHEET CLASS DESIGN
+---------------------
+
+Attributes (Private):
+---------------------
+1. anzahl_wohnungen: int
+2. zahlungstag: String (DD.MM.YYYY)
+3. muellabfuhr: float
+4. wasser_grundpreis: float
+5. wasser_preis_kubik: float
+6. niederschlagswasser: float
+7. schmutzwasser: float
+8. haftpflichtversicherung: float
+9. elementarversicherung: float
+10. grundsteuer: dict [string, float]
+11. strom_allgemein: float
+12. apartments: dict [string, float]
+13. tenants: [Tenant]
+
+Methods (Public):
+-----------------
+1. __init__(self, anzahl_wohnungen, zahlungstag,...): InfoSheet
+   Description: Constructor for the InfoSheet class.
+   
+2. validate() -> bool:
+   Description: This method validates all attributes by calling private validation methods.
+
+3. get_*() and set_*() for each attribute:
+   Description: Getter and Setter methods for each private attribute.
+
+4. get_personenmonate_total() -> float:
+   Description: add up all personenmonate from all tenants.
+
+Methods (Private):
+------------------
+1. _validate_anzahl_wohnungen():
+   Description: Validates the 'anzahl_wohnungen' attribute ensuring it is > 0.
+
+2. _validate_zahlungstag():
+   Description: Validates the 'zahlungstag' ensuring it follows the DD.MM.YYYY format.
+
+3. _validate_muellabfuhr():
+   Description: Validates that the attribute is > 0.
+
+4. _validate_grundsteuer():
+   Description: Validates the size of 'grundsteuer' dictionary equals 3, 
+   and checks for strings "Erdgeschoss", "OG_links", "OG_rechts".
+
+5. _validate_apartments():
+   Description: Validates that the size of 'apartments' equals 'anzahl_wohnungen', 
+   and checks for strings "Apartment", "EG_links", "EG_rechts", "OG_links", "OG_rechts".
+
+Constraints:
+------------
+1. zahlungstag: Should be in DD.MM.YYYY format.
+2. grundsteuer: Dictionary size should be 3 with strings "Erdgeschoss", "OG_links", "OG_rechts".
+3. apartments: Dictionary size should equal 'anzahl_wohnungen' and contain strings 
+   "Apartment", "EG_links", "EG_rechts", "OG_links", "OG_rechts".
+4. All other numeric attributes should be > 0.

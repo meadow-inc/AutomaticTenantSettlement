@@ -1,0 +1,59 @@
+GENERAL TEMPLATE                                      |    SPECIFIC EXAMPLE
+------------------------------------------------------|---------------------------------------------------------------                                                     |
+                                                      |
+<GeneralInfo>                                         |      <GeneralInfo>
+Anzahl-Wohnungen: Anzahl der Wohnungen                |      Anzahl-Wohnungen: 5
+Zahlungstag: Datum (DD.MM.YY)                         |      Zahlungstag: 15.06.2023
+</GeneralInfo>                                        |      </GeneralInfo>
+                                                      |   
+<Muellabfuhr>                                         |      <Muellabfuhr>
+Summe: Preis in Euro                                  |      Summe: 494.31
+</Muellabfuhr>                                        |      </Muellabfuhr>
+                                                      |   
+<Wasser>                                              |      <Wasser>
+Grundpreis: Grundpreis in Euro                        |      Grundpreis: 225
+Wasserpreis: Preis pro m³ in Euro                     |      Wasserpreis: 1.82
+</Wasser>                                             |      </Wasser>
+                                                      |   
+<Niederschlagswasser>                                 |      <Niederschlagswasser>
+gemaess-Stadtwerke-Rechnung: Preis in Euro            |      gemaess-Stadtwerke-Rechnung: 198
+</Niederschlagswasser>                                |      </Niederschlagswasser>
+                                                      |   
+<Schmutzwasser>                                       |      <Schmutzwasser>
+gemaess-Abgabenbescheid-Stadt: Preis in Euro          |      gemaess-Abgabenbescheid-Stadt-Attendorn: 879
+</Schmutzwasser>                                      |      </Schmutzwasser>
+                                                      |   
+<Feuer-Haftpflichtversicherung>                       |      <Feuer-Haftpflichtversicherung>
+Haftpflichtversicherung-Jahreswert: Preis in Euro     |      Haftpflichtversicherung-Jahreswert: 144
+Elementarversicherung-Jahreswert: Preis in Euro       |      Elementarversicherung-Jahreswert: 1331
+</Feuer-Haftpflichtversicherung>                      |      </Feuer-Haftpflichtversicherung>
+                                                      |   
+<Grundsteuer>                                         |      <Grundsteuer>
+Erdgeschoss: Preis in Euro                            |      Erdgeschoss: 335
+OG-links: Preis in Euro                               |      OG-links: 121
+OG-rechts: Preis in Euro                              |      OG-rechts: 101
+</Grundsteuer>                                        |      </Grundsteuer>
+                                                      |   
+<Strom-allgmeien>                                     |      <Strom-allgmeien>
+laut-Rechnung-Stromlieferung: Preis in Euro           |      laut-Rechnung-Stromlieferung: 224
+</Strom-allgmeien>                                    |      </Strom-allgmeien>
+                                                      |   
+<Apartments>                                          |      <Apartments>
+Apartment: Quadratmeter                               |      Apartment: 28
+EG_links: Quadratmeter                                |      EG_links: 72
+EG_rechts: Quadratmeter                               |      EG_rechts: 72
+OG_links: Quadratmeter                                |      OG_links: 92
+OG_rechts: Quadratmeter                               |      OG_rechts: 81
+</Apartments>                                         |      </Apartments>
+                                                      |   
+<tenant-template>                                     |      <tenant-template>
+first_name: Vorname                                   |      first_name: Herr
+last_name: Nachname                                   |      last_name: Doenges
+house_master_price: Preis in Euro                     |      house_master_price: 22
+location: Wohnungname                                 |      location: EG_links
+duration: Dauer in Monaten                            |      duration: 12
+quantity: Anzahl der Personen                         |      quantity: 1.0
+advance_payment: Vorauszahlung in Euro                |      advance_payment: 262.50
+ista-bill: Ista Abrechnung in Euro                    |      ista-bill: 515.13
+water-cubic: Kubikmeter Wasser                        |      water-cubic: 8.6
+</tenant-template>                                    |      </tenant-template>

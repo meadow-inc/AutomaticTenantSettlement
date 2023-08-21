@@ -1,0 +1,65 @@
+\documentclass{letter}
+\usepackage{colortbl}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{ifthen}
+
+\begin{document}
+
+\newcommand{\debtAmount}{summe_nachzahlung}% Placeholder for the debt amount. Replace <tenant_debt> with the actual value.
+\newcommand{\Abrechnungsjahr}{rechnungs_jahr}
+
+\begin{letter}{
+\textbf{Empfänger:} \\
+tenant_vorname tenant_nachname
+}
+
+\address{
+Andreas Wiese \\
+Am Pfarrgärtchen 13 \\
+Heusenstamm, 63150
+}
+
+\date{\today}
+
+\opening{\textbf{Betreff: Nebenkostenabrechnung für das Jahr <\Abrechnungsjahr>}}
+
+\vspace{20pt}
+
+Sehr geehrter tenant_vorname tenant_lastname,
+
+anbei übersende ich Ihnen die Nebenkostenabrechnung für das Jahr <\Abrechnungsjahr>.
+
+\ifthenelse{\debtAmount > 0}{
+    \ifthenelse{\debtAmount < 5}{
+        Aus dieser ergibt sich eine Nachzahlung in Höhe von \debtAmount Euro, welche wir getrost vergessen können.
+    }{
+        Aus dieser ergibt sich eine Nachzahlung in Höhe von \debtAmount Euro. Ich bitte um eine Überweisung bis zum <pay_date> auf folgendes Bankkonto:
+
+        \vspace{10pt}
+
+        Bank: Sparkasse ALK
+
+        Kontonummer: DE45 4625 1630 0000 1048 44
+
+        BLZ: 46251630
+    }
+}{
+    Aus dieser ergibt sich eine Rückzahlung in Höhe von \debtAmount Euro, welche ich in den kommenden Tagen auf Ihr mir bekanntes Konto überweisen werde.
+}
+
+\vspace{10pt}
+
+Mit freundlichen Grüssen,
+
+Andreas Wiese
+
+\vspace{20pt}
+
+\end{letter}
+
+\newpage
+\Placeholder{billTablePlaceholder} % Placeholder for the table string generated in your BillProcessor class
+
+\end{document}
+

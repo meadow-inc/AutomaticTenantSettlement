@@ -1,0 +1,77 @@
+---------------------
+DETAILED TENANT CLASS DESIGN
+---------------------
+
+Attributes (Private):
+---------------------
+(Already provided in the high-level design)
+
+Methods (Public):
+-----------------
+
+1. __init__(self, vorname, nachname, hausmeister, ort, dauer, personen, vorauszahlung, ista_rechnung, wassermenge):
+   Pseudocode:
+   ----------
+   - Initialize all attributes using the values passed as arguments.
+   - Call the validate() method to validate all attributes.
+
+2. validate() -> bool:
+   Pseudocode:
+   ----------
+   - Call each private validation method for every attribute.
+   - If any validation method returns False:
+       * Display an error message.
+       * Exit the program.
+
+3. get_*() and set_*() for each attribute:
+   Pseudocode:
+   ----------
+   - For get_*():
+       * Return the corresponding attribute.
+
+   - For set_*():
+       * Set the attribute value.
+       * Call the corresponding private validate method.
+       * If validation returns False:
+           * Display an error message.
+           * Exit the program.
+
+4. get_personenmonate():
+   Pseudocode:
+   ----------
+   - Return dauer multiplied by personen.
+
+
+Methods (Private):
+------------------
+
+1. _validate_vorname():
+   Pseudocode:
+   ----------
+   - If vorname is empty:
+       * Return False.
+   - Else:
+       * Return True.
+
+(For other attributes, the approach is similar, but validations change based on the attribute.)
+
+2. _validate_hausmeister():
+   Pseudocode:
+   ----------
+   - If hausmeister <= 0:
+       * Return False.
+   - Else:
+       * Return True.
+
+3. _validate_ort():
+   Pseudocode:
+   ----------
+   - If ort not in ["EG_links", "EG_rechts", "Apartment", "OG_rechts", "OG_links"]:
+       * Return False.
+   - Else:
+       * Return True.
+
+Constraints:
+------------
+(Already provided in the high-level design)
+

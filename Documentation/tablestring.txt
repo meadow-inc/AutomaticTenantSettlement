@@ -1,0 +1,30 @@
+\hspace{-1cm}
+\begin{tabular}{|>{\columncolor[gray]{0.8}}l|c|c|c|c|}
+\hline
+\rowcolor[gray]{0.8} \textbf{Pos} & \textbf{Titel} & \textbf{Einheitspreis} & Multiplikator & Kosten in EUR \\
+\hline
+1 & Ista-Abrechnung & - & - & \placeholder{ista_abrechnung} EUR \\
+\hline
+2 & Müllabfuhr & \placeholder{muell_einheitspreis} EUR & \placeholder{muell_multiplikator} Personenmonate & \placeholder{muell_gesamt} EUR \\
+\hline
+3 & Wasser  & \placeholder{wasser_einheitspreis} EUR & \placeholder{wasser_multiplikator} $m^3$ & \placeholder{wasser_gesamt} EUR \\
+\hline
+4 & Wasseruhr Grundgebühr & \placeholder{wasser_grundgebuehr_einheitspreis} EUR & \placeholder{wasser_grundgebuehr_multiplikator} Wohnungseinheit & \placeholder{wasser_grundgebuehr_gesamt} EUR \\
+\hline
+5 & Schmutz- \& Niederschlagswasser & \placeholder{schmutz_niederschlagswasser_einheitspreis} EUR & \placeholder{schmutz_niederschlagswasser_multiplikator} $m^2$ & \placeholder{schmutz_niederschlagswasser_gesamt} EUR \\
+\hline
+6 & Strom allgemein & \placeholder{strom_allgemein_einheitspreis} EUR & \placeholder{strom_allgemein_multiplikator} $m^2$ & \placeholder{strom_gesamt} EUR \\
+\hline
+7 & Grundsteuer & \placeholder{grundsteuer_einheitspreis} EUR & \placeholder{grundsteuer_multiplikator} $m^2$ & \placeholder{grundsteuer_gesamt} EUR \\
+\hline
+8 & Feuer- \& Haftpflichtvers. & \placeholder{feuer_haftpflicht_einheitspreis} EUR & \placeholder{feuer_haftpflicht_multiplikator} $m^2$ & \placeholder{feuer_haftpflicht_gesamt} EUR \\
+\hline
+9 & Hausmeister & \placeholder{hausmeister_einheitspreis} EUR & \placeholder{hausmeister_multiplikator} Monate & \placeholder{hausmeister_gesamt} EUR \\
+\hline
+10 & Summe & - & - & \placeholder{summe_kosten} EUR \\
+\hline
+11 & Abzüglich Vorauszahlungssumme & - & - & \placeholder{summe_vorauszahlung} EUR \\
+\hline
+12 & Nachzahlung & - & - & \placeholder{summe_nachzahlung} EUR \\
+\hline
+\end{tabular}

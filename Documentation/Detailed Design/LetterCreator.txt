@@ -1,0 +1,78 @@
+---------------------------------------------------------
+LetterCreator Class Design Document
+---------------------------------------------------------
+
+Attributes (Private):
+---------------------
+1. bill: Bill
+   - Description: Represents the bill that needs to be integrated into the letter.
+
+2. table: String
+   - Description: Contains the formatted table representing various components of the bill.
+
+3. letter: String
+   - Description: Contains the formatted letter after integrating the bill details.
+
+4. letter_source: String
+   - Description: Represents the template/source of the letter before the bill details are integrated.
+
+5. table_source: String
+   - Description: Represents the template/source for the table to be integrated into the letter.
+
+
+Methods (Public):
+-----------------
+1. __init__(self, bill: Bill, letter_source: String, table_source: String)
+   - Description: Constructor for the LetterCreator class. Initializes the attributes with given values.
+
+2. createLetter() -> void:
+   - Description: Generates the formatted letter by integrating the table (representing the bill details) into the letter template.
+
+
+Methods (Private):
+------------------
+1. _createTable() -> void:
+   - Description: Generates the formatted table representing various components of the bill.
+
+
+Purpose:
+--------
+The purpose of the LetterCreator class is to generate a formatted letter by integrating the bill details. The bill details are first structured into a table format, and then this table is embedded into the letter template. The class offers a streamlined way to create letters containing specific bill details for various recipients.
+
+
+Pseudocode for __init__ Method:
+--------------------------------
+Constructor __init__(self, bill: Bill, letter_source: String, table_source: String) -> void:
+    1. Initialize bill with the given bill object.
+    2. Initialize letter_source with the given letter_source.
+    3. Initialize table_source with the given table_source.
+    4. Call _createTable() method to initialize the table attribute.
+    5. Initialize letter attribute as an empty string.
+END METHOD
+
+
+Pseudocode for createLetter() Method:
+-------------------------------------
+Method createLetter() -> void:
+    1. Retrieve necessary values from the 'bill' object:
+       - debtAmount = bill.summe_nachzahlung()
+       - Abrechnungsjahr = bill.get_rechnungs_jahr()
+
+    2. Replace placeholders in 'letter_source' with retrieved values:
+       - Replace `\debtAmount` with debtAmount value.
+       - Replace `\Abrechnungsjahr` with Abrechnungsjahr value.
+       - Replace `\Placeholder{billTablePlaceholder}` with table value.
+
+    3. Once all placeholders are replaced, update the 'letter' attribute with the modified letter_source.
+END METHOD
+
+
+Pseudocode for _createTable() Method:
+-------------------------------------
+Method _createTable() -> void:
+    1. Load the table_source into a local variable.
+    2. For each line in table_source:
+       - Replace placeholders with corresponding values from 'bill' object.
+    3. Once all placeholders are replaced, update the 'table' attribute with the modified table_source.
+END METHOD
+

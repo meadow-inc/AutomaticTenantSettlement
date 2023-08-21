@@ -1,0 +1,77 @@
+-------------------
+DETAILED BILL CLASS DESIGN
+-------------------
+
+Attributes (Private):
+---------------------
+(Already provided in the high-level design)
+
+Methods (Public):
+-----------------
+
+1. Getters and Setters for each attribute:
+   Pseudocode:
+   ----------
+   - For get_*():
+       * Return the corresponding attribute.
+
+   - For set_*():
+       * Set the attribute value.
+
+2. muell_kosten() -> float:
+   Pseudocode:
+   ----------
+   - Return muell_einheitspreis * muell_multiplikator
+
+3. wasser_kosten() -> float:
+   Pseudocode:
+   ----------
+   - Return wasser_einheitspreis * wasser_multiplikator
+
+4. wasser_grundgebuehr_kosten() -> float:
+   Pseudocode:
+   ----------
+   - Return wasser_grundgebuehr_einheitspreis * wasser_grundgebuehr_multiplikator
+
+5. schmutz_niederschlagswasser_kosten() -> float:
+   Pseudocode:
+   ----------
+   - Return schmutz_niederschlagswasser_einheitspreis * schmutz_niederschlagswasser_multiplikator
+
+6. strom_allgemein_kosten() -> float:
+   Pseudocode:
+   ----------
+   - Return strom_allgemein_einheitspreis * strom_allgemein_multiplikator
+
+7. grundsteuer_kosten() -> float:
+   Pseudocode:
+   ----------
+   - Return grundsteuer_einheitspreis * grundsteuer_multiplikator
+
+8. feuer_haftpflicht_kosten() -> float:
+   Pseudocode:
+   ----------
+   - Return feuer_haftpflicht_einheitspreis * feuer_haftpflicht_multiplikator
+
+9. hausmeister_kosten() -> float:
+   Pseudocode:
+   ----------
+   - Return hausmeister_einheitspreis * hausmeister_multiplikator
+
+10. summe_kosten() -> float:
+    Pseudocode:
+   ----------
+   - Total_Cost = muell_kosten() + wasser_kosten() + wasser_grundgebuehr_kosten() + schmutz_niederschlagswasser_kosten() 
+                  + strom_allgemein_kosten() + grundsteuer_kosten() + feuer_haftpflicht_kosten() + hausmeister_kosten() 
+                  + tenant.get_ista_rechnung()
+   - Return Total_Cost
+
+11. summe_nachzahlung() -> float:
+    Pseudocode:
+   ----------
+   - Return tenant.get_vorauszahlung() - summe_kosten()
+
+Purpose:
+--------
+(Already provided in the high-level design)
+

@@ -1,0 +1,38 @@
+------------------------
+LETTER CREATOR CLASS DESIGN
+------------------------
+
+Attributes (Private):
+---------------------
+1. bill: Bill
+   Description: Represents the bill that needs to be integrated into the letter.
+
+2. table: String
+   Description: Contains the formatted table representing various components of the bill.
+
+3. letter: String
+   Description: Contains the formatted letter after integrating the bill details.
+
+4. letter_source: String
+   Description: Represents the template/source of the letter before the bill details are integrated.
+
+5. table_source: String
+   Description: Represents the template/source for the table to be integrated into the letter.
+
+Methods (Public):
+-----------------
+1. __init__(self, bill: Bill, letter_source: String, table_source: String):
+   Description: Constructor for the LetterCreator class. Initializes the attributes with given values.
+
+2. createLetter() -> void:
+   Description: Generates the formatted letter by integrating the table (representing the bill details) into the letter template.
+
+Methods (Private):
+------------------
+1. _createTable() -> void:
+   Description: Generates the formatted table representing various components of the bill.
+
+Purpose:
+--------
+The purpose of the LetterCreator class is to generate a formatted letter by integrating the bill details. The bill details are first structured into a table format, and then this table is embedded into the letter template. The class offers a streamlined way to create letters containing specific bill details for various recipients.
+
