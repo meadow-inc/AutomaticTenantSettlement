@@ -4,7 +4,8 @@ DETAILED INFOSHEET PARSER CLASS DESIGN
 
 Attributes (Private):
 ---------------------
-(Already provided in the high-level design)
+1. input: String
+   Description: Contains the file input.
 
 Methods (Public):
 -----------------

@@ -4,7 +4,19 @@ DETAILED INFO SHEET CLASS DESIGN
 
 Attributes (Private):
 ---------------------
-(Already provided in the high-level design)
+1. anzahl_wohnungen: int
+2. zahlungstag: String (DD.MM.YYYY)
+3. muellabfuhr: float
+4. wasser_grundpreis: float
+5. wasser_preis_kubik: float
+6. niederschlagswasser: float
+7. schmutzwasser: float
+8. haftpflichtversicherung: float
+9. elementarversicherung: float
+10. grundsteuer: dict [string, float]
+11. strom_allgemein: float
+12. apartments: dict [string, float]
+13. tenants: [Tenant]
 
 Methods (Public):
 -----------------

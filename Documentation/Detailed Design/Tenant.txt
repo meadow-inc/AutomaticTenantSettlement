@@ -4,7 +4,16 @@ DETAILED TENANT CLASS DESIGN
 
 Attributes (Private):
 ---------------------
-(Already provided in the high-level design)
+1. vorname: string
+2. nachname: string
+3. hausmeister: float
+4. ort: string
+5. dauer: float
+6. personen: float
+7. vorauszahlung: float
+8. ista_rechnung: float
+9. wassermenge: float
+
 
 Methods (Public):
 -----------------
