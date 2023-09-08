@@ -62,7 +62,7 @@ float Tenant::getWassermenge() const {
     return wassermenge;
 }
 
-float Tenant::get_personenmonate(){
+float Tenant::get_personenmonate() const{
     return dauer * personen;
 }
 

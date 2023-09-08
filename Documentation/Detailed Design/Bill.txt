@@ -4,7 +4,59 @@ DETAILED BILL CLASS DESIGN
 
 Attributes (Private):
 ---------------------
-(Already provided in the high-level design)
+1. tenant: Tenant
+   Description: Represents the tenant for whom the bill is calculated.
+
+2. muell_einheitspreis: float
+   Description: The unit price for waste disposal.
+
+3. muell_multiplikator: float
+   Description: Multiplier for the waste disposal cost.
+
+4. wasser_einheitspreis: float
+   Description: The unit price for water usage.
+
+5. wasser_multiplikator: float
+   Description: Multiplier for water usage cost.
+
+6. wasser_grundgebuehr_einheitspreis: float
+   Description: The unit price for the basic water fee.
+
+7. wasser_grundgebuehr_multiplikator: float
+   Description: Multiplier for the basic water fee cost.
+
+8. schmutz_niederschlagswasser_einheitspreis: float
+   Description: The unit price for wastewater and stormwater.
+
+9. schmutz_niederschlagswasser_multiplikator: float
+   Description: Multiplier for wastewater and stormwater cost.
+
+10. strom_allgemein_einheitspreis: float
+    Description: The unit price for general electricity.
+
+11. strom_allgemein_multiplikator: float
+    Description: Multiplier for general electricity cost.
+
+12. grundsteuer_einheitspreis: float
+    Description: The unit price for property tax.
+
+13. grundsteuer_multiplikator: float
+    Description: Multiplier for property tax.
+
+14. feuer_haftpflicht_einheitspreis: float
+    Description: The unit price for fire and liability insurance.
+
+15. feuer_haftpflicht_multiplikator: float
+    Description: Multiplier for fire and liability insurance cost.
+
+16. hausmeister_einheitspreis: float
+    Description: The unit price for janitor services.
+
+17. hausmeister_multiplikator: float
+    Description: Multiplier for janitor services cost.
+
+18. rechnungs_jahr: int
+    Description: The year for which the bills are created.
 
 Methods (Public):
 -----------------

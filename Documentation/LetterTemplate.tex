@@ -8,10 +8,14 @@
 
 \newcommand{\debtAmount}{summe_nachzahlung}% Placeholder for the debt amount. Replace <tenant_debt> with the actual value.
 \newcommand{\Abrechnungsjahr}{rechnungs_jahr}
+\newcommand{\tenantFirstname}{tenant_vorname}
+\newcommand{\tenantLastname}{tenant_nachname}
+\newcommand{\paydate}{zahlungs_tag}
+\newcommand{\overviewTable}{overview_table}
 
 \begin{letter}{
 \textbf{Empfänger:} \\
-tenant_vorname tenant_nachname
+\tenantFirstname \tenantLastname
 }
 
 \address{
@@ -26,7 +30,7 @@ Heusenstamm, 63150
 
 \vspace{20pt}
 
-Sehr geehrter tenant_vorname tenant_lastname,
+Sehr geehrter \tenantFirstname \tenantLastname,
 
 anbei übersende ich Ihnen die Nebenkostenabrechnung für das Jahr <\Abrechnungsjahr>.
 
@@ -34,7 +38,7 @@ anbei übersende ich Ihnen die Nebenkostenabrechnung für das Jahr <\Abrechnungs
     \ifthenelse{\debtAmount < 5}{
         Aus dieser ergibt sich eine Nachzahlung in Höhe von \debtAmount Euro, welche wir getrost vergessen können.
     }{
-        Aus dieser ergibt sich eine Nachzahlung in Höhe von \debtAmount Euro. Ich bitte um eine Überweisung bis zum <pay_date> auf folgendes Bankkonto:
+        Aus dieser ergibt sich eine Nachzahlung in Höhe von \debtAmount Euro. Ich bitte um eine Überweisung bis zum \paydate auf folgendes Bankkonto:
 
         \vspace{10pt}
 
@@ -59,7 +63,7 @@ Andreas Wiese
 \end{letter}
 
 \newpage
-\Placeholder{billTablePlaceholder} % Placeholder for the table string generated in your BillProcessor class
+\overviewTable
 
 \end{document}
 

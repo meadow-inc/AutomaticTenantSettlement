@@ -41,7 +41,7 @@ class Tenant{
 
         float getWassermenge() const ;
 
-        float get_personenmonate();
+        float get_personenmonate() const;
 
     private:
         

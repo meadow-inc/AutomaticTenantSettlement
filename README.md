@@ -18,5 +18,3 @@ The genesis of the AutomaticTenantSettlement project stems from a desire to appl
 - **Cleaner Code**: Well-structured projects inherently promote cleaner and more readable code. This not only benefits the initial developer but also anyone else who might work on or review the project in the future.
 
 This project, therefore, is a testament to the commitment of avoiding the pitfalls of the "build-and-fix" approach. By taking a more thoughtful and structured path, the aim is to produce software that stands the test of time, both in terms of functionality and maintainability.
-
-

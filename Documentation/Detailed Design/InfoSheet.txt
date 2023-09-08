@@ -45,6 +45,10 @@ Methods (Public):
    - Set the value of zahlungstag.
    - Call validate(). If it returns False, print an error message and exit.
 
+5. get_personenmonate_total() -> float:
+   Description: Return the sum of personenmonate for all tenants.
+
+
 Methods (Private):
 ------------------
 

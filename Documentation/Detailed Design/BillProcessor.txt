@@ -28,58 +28,56 @@ Methods (Public):
 2. process() -> Bill:
    Description: Processes the information from both InfoSheet and Tenant to generate a Bill.
 
-3. get_personenmonate_total() -> float:
-   Description: Return the sum of personenmonate for all tenants.
 
 
 Methods (Private):
 ------------------
-1. _get_muell_einheitspreis() -> float:
+1. _calc_muell_einheitspreis() -> float:
    Description: Retrieves the unit price for waste disposal.
 
-2. _get_muell_multiplikator() -> float:
+2. _calc_muell_multiplikator() -> float:
    Description: Retrieves the multiplier for waste disposal.
 
-3. _get_wasser_einheitspreis() -> float:
+3. _calc_wasser_einheitspreis() -> float:
    Description: Retrieves the unit price for water usage.
 
-4. _get_wasser_multiplikator() -> float:
+4. _calc_wasser_multiplikator() -> float:
    Description: Retrieves the multiplier for water usage.
 
-5. _get_wasser_grundgebuehr_einheitspreis() -> float:
+5. _calc_wasser_grundgebuehr_einheitspreis() -> float:
    Description: Retrieves the unit price for the basic water fee.
 
-6. _get_wasser_grundgebuehr_multiplikator() -> float:
+6. _calc_wasser_grundgebuehr_multiplikator() -> float:
    Description: Retrieves the multiplier for the basic water fee.
 
-7. _get_schmutz_niederschlagswasser_einheitspreis() -> float:
+7. _calc_schmutz_niederschlagswasser_einheitspreis() -> float:
    Description: Retrieves the unit price for wastewater and stormwater.
 
-8. _get_schmutz_niederschlagswasser_multiplikator() -> float:
+8. _calc_schmutz_niederschlagswasser_multiplikator() -> float:
    Description: Retrieves the multiplier for wastewater and stormwater.
 
-9. _get_strom_allgemein_einheitspreis() -> float:
+9. _calc_strom_allgemein_einheitspreis() -> float:
    Description: Retrieves the unit price for general electricity.
 
-10. _get_strom_allgemein_multiplikator() -> float:
+10. _calc_strom_allgemein_multiplikator() -> float:
     Description: Retrieves the multiplier for general electricity.
 
-11. _get_grundsteuer_einheitspreis() -> float:
+11. _calc_grundsteuer_einheitspreis() -> float:
     Description: Retrieves the unit price for property tax.
 
-12. _get_grundsteuer_multiplikator() -> float:
+12. _calc_grundsteuer_multiplikator() -> float:
     Description: Retrieves the multiplier for property tax.
 
-13. _get_feuer_haftpflicht_einheitspreis() -> float:
+13. _calc_feuer_haftpflicht_einheitspreis() -> float:
     Description: Retrieves the unit price for fire and liability insurance.
 
-14. _get_feuer_haftpflicht_multiplikator() -> float:
+14. _calc_feuer_haftpflicht_multiplikator() -> float:
     Description: Retrieves the multiplier for fire and liability insurance.
 
-15. _get_hausmeister_einheitspreis() -> float:
+15. _calc_hausmeister_einheitspreis() -> float:
     Description: Retrieves the unit price for janitor services.
 
-16. _get_hausmeister_multiplikator() -> float:
+16. _calc_hausmeister_multiplikator() -> float:
     Description: Retrieves the multiplier for janitor services.
 
 Purpose:
@@ -108,52 +106,52 @@ Methods (Public):
 
 Methods (Private):
 ------------------
-1. _get_muell_einheitspreis() -> float:
+1. _calc_muell_einheitspreis() -> float:
    Description: Retrieves the unit price for waste disposal.
 
-2. _get_muell_multiplikator() -> float:
+2. _calc_muell_multiplikator() -> float:
    Description: Retrieves the multiplier for waste disposal.
 
-3. _get_wasser_einheitspreis() -> float:
+3. _calc_wasser_einheitspreis() -> float:
    Description: Retrieves the unit price for water usage.
 
-4. _get_wasser_multiplikator() -> float:
+4. _calc_wasser_multiplikator() -> float:
    Description: Retrieves the multiplier for water usage.
 
-5. _get_wasser_grundgebuehr_einheitspreis() -> float:
+5. _calc_wasser_grundgebuehr_einheitspreis() -> float:
    Description: Retrieves the unit price for the basic water fee.
 
-6. _get_wasser_grundgebuehr_multiplikator() -> float:
+6. _calc_wasser_grundgebuehr_multiplikator() -> float:
    Description: Retrieves the multiplier for the basic water fee.
 
-7. _get_schmutz_niederschlagswasser_einheitspreis() -> float:
+7. _calc_schmutz_niederschlagswasser_einheitspreis() -> float:
    Description: Retrieves the unit price for wastewater and stormwater.
 
-8. _get_schmutz_niederschlagswasser_multiplikator() -> float:
+8. _calc_schmutz_niederschlagswasser_multiplikator() -> float:
    Description: Retrieves the multiplier for wastewater and stormwater.
 
-9. _get_strom_allgemein_einheitspreis() -> float:
+9. _calc_strom_allgemein_einheitspreis() -> float:
    Description: Retrieves the unit price for general electricity.
 
-10. _get_strom_allgemein_multiplikator() -> float:
+10. _calc_strom_allgemein_multiplikator() -> float:
     Description: Retrieves the multiplier for general electricity.
 
-11. _get_grundsteuer_einheitspreis() -> float:
+11. _calc_grundsteuer_einheitspreis() -> float:
     Description: Retrieves the unit price for property tax.
 
-12. _get_grundsteuer_multiplikator() -> float:
+12. _calc_grundsteuer_multiplikator() -> float:
     Description: Retrieves the multiplier for property tax.
 
-13. _get_feuer_haftpflicht_einheitspreis() -> float:
+13. _calc_feuer_haftpflicht_einheitspreis() -> float:
     Description: Retrieves the unit price for fire and liability insurance.
 
-14. _get_feuer_haftpflicht_multiplikator() -> float:
+14. _calc_feuer_haftpflicht_multiplikator() -> float:
     Description: Retrieves the multiplier for fire and liability insurance.
 
-15. _get_hausmeister_einheitspreis() -> float:
+15. _calc_hausmeister_einheitspreis() -> float:
     Description: Retrieves the unit price for janitor services.
 
-16. _get_hausmeister_multiplikator() -> float:
+16. _calc_hausmeister_multiplikator() -> float:
     Description: Retrieves the multiplier for janitor services.
 
 Purpose:
@@ -172,52 +170,52 @@ Methods (Public):
 
 Methods (Private):
 ------------------
-1. _get_muell_einheitspreis() -> float:
+1. _calc_muell_einheitspreis() -> float:
    Description: Retrieves the unit price for waste disposal.
 
-2. _get_muell_multiplikator() -> float:
+2. _calc_muell_multiplikator() -> float:
    Description: Retrieves the multiplier for waste disposal.
 
-3. _get_wasser_einheitspreis() -> float:
+3. _calc_wasser_einheitspreis() -> float:
    Description: Retrieves the unit price for water usage.
 
-4. _get_wasser_multiplikator() -> float:
+4. _calc_wasser_multiplikator() -> float:
    Description: Retrieves the multiplier for water usage.
 
-5. _get_wasser_grundgebuehr_einheitspreis() -> float:
+5. _calc_wasser_grundgebuehr_einheitspreis() -> float:
    Description: Retrieves the unit price for the basic water fee.
 
-6. _get_wasser_grundgebuehr_multiplikator() -> float:
+6. _calc_wasser_grundgebuehr_multiplikator() -> float:
    Description: Retrieves the multiplier for the basic water fee.
 
-7. _get_schmutz_niederschlagswasser_einheitspreis() -> float:
+7. _calc_schmutz_niederschlagswasser_einheitspreis() -> float:
    Description: Retrieves the unit price for wastewater and stormwater.
 
-8. _get_schmutz_niederschlagswasser_multiplikator() -> float:
+8. _calc_schmutz_niederschlagswasser_multiplikator() -> float:
    Description: Retrieves the multiplier for wastewater and stormwater.
 
-9. _get_strom_allgemein_einheitspreis() -> float:
+9. _calc_strom_allgemein_einheitspreis() -> float:
    Description: Retrieves the unit price for general electricity.
 
-10. _get_strom_allgemein_multiplikator() -> float:
+10. _calc_strom_allgemein_multiplikator() -> float:
     Description: Retrieves the multiplier for general electricity.
 
-11. _get_grundsteuer_einheitspreis() -> float:
+11. _calc_grundsteuer_einheitspreis() -> float:
     Description: Retrieves the unit price for property tax.
 
-12. _get_grundsteuer_multiplikator() -> float:
+12. _calc_grundsteuer_multiplikator() -> float:
     Description: Retrieves the multiplier for property tax.
 
-13. _get_feuer_haftpflicht_einheitspreis() -> float:
+13. _calc_feuer_haftpflicht_einheitspreis() -> float:
     Description: Retrieves the unit price for fire and liability insurance.
 
-14. _get_feuer_haftpflicht_multiplikator() -> float:
+14. _calc_feuer_haftpflicht_multiplikator() -> float:
     Description: Retrieves the multiplier for fire and liability insurance.
 
-15. _get_hausmeister_einheitspreis() -> float:
+15. _calc_hausmeister_einheitspreis() -> float:
     Description: Retrieves the unit price for janitor services.
 
-16. _get_hausmeister_multiplikator() -> float:
+16. _calc_hausmeister_multiplikator() -> float:
     Description: Retrieves the multiplier for janitor services.
 
 Purpose:
