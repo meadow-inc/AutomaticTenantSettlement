@@ -1,5 +1,7 @@
-#include "Bill.h"
-#include "Tenant.h"
+#include "../../include/TenantSettlement/Bill.h"
+#include "../../include/TenantSettlement/Tenant.h"
+#include <iostream>
+#include <ostream>
 Bill::Bill(Tenant t, float me, float mm, float we, float wm,
         float wge, float wgm, float sne, float snm, float sae, float sam,
         float ge, float gm, float fhe, float fhm, float he, float hm, float rj, std::string zt):
@@ -24,7 +26,9 @@ Bill::Bill(Tenant t, float me, float mm, float we, float wm,
 {};
 
 float Bill::muell_kosten() const {
+    int k = 5;
     return muell_einheitspreis * muell_multiplikator;
+    
 }
 
 float Bill::wasser_kosten() const {
