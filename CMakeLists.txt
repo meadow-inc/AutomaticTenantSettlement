@@ -14,7 +14,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 17)
 
 # Add include folder
-add_subdirectory(include/TenantSettlement)
+add_subdirectory(include)
 
 # Add src folder 
 add_subdirectory(src)

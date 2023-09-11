@@ -12,3 +12,7 @@
  
 add_executable(bill_tests bill_test.cpp)
 target_link_libraries(bill_tests gtest gtest_main tenant_settlement)
+add_test(NAME BillTest COMMAND bill_tests)
+
+
+target_include_directories(bill_tests PRIVATE ${CMAKE_SOURCE_DIR}/include/TenantSettlement)
